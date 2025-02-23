@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		<link rel="icon" href="http://ec2-18-216-194-84.us-east-2.compute.amazonaws.com/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>BooRadlyGames</title>
+		
+		
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+                
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/templatemo-festava-live.css" rel="stylesheet">
+        
+
+    </head>
+    
+    <body>
+
+
+        <main>
+
+            <header class="site-header">
+                <div class="container"> </div>
+            </header>
+
+           
+                <div class="container">
+                
+
+                        <div class="col-lg-6 col-12">
+                            <div class="about-text-wrap">
+                               
+
+                                <!-- <div class="about-text-info d-flex">
+                                    <div class="d-flex">
+                                        
+                                    </div>
+
+
+                                    <div class="ms-4"> 
+                                        <h6>I can't decide what to put here...&nbsp;</h6>
+
+                                        
+                                    </div>-->
+                          </div>
+                      </div>
+                  </div>
+
+                    </div>
+                </div>
+         
+
+
+            <section class="artists-section section-padding" id="section_3">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-12 text-center">
+							<h2 class="text-white mb-6 text-center">BooRadlyGames</h2>
+                            
+                            <h6 class="text-white mt-4 text-center">A website to showcase&nbsp;hobbyist content. </h6>
+							
+                            <h1 class= text-white "mb-4"></h1>
+							<br>
+							<br>
+							<br>
+							
+                        </div>
+
+                        <div class="col-lg-5 col-12 text-center">
+                            <div class="artists-thumb">
+                                
+								
+                                	
+								<h2 class="mb-4"><a href="RocketBoost/Boost.html">RocketBoost</a></h2>
+								
+								<h2 class="mb-4"><a href="Memory/memory.html">Memory HongKong</a></h2>
+								
+								<h2 class="mb-4"><a href="/DragonSnake/index.html">Dragon Snake</a></h2>
+								
+								<h2 class="mb-4"><a href="/2048/index.html">2048</a></h2>
+								<h2 class="mb-4"><a href="/Gallery/Gallery.html">Gallery</a></h2>
+								<h2 class="mb-4"><a href="/Asteroids/index.html">Asteroids</a></h2>
+								<h2 class="mb-4"><a href="/GalaxyShooter/GalaxyShooter.html">GalaxyShooter</a></h2>
+								<h2 class="mb-4"><a href="/ChatGPT/index.html">ChatGPT</a></h2>
+								<h2 class="mb-4"><a href="/Insult/index.html">Morty</a></h2>
+								<h2 class="mb-4"><a href="/TermHacker/index.html">Terminal Hacker</a></h2>															
+								<h2 class="mb-4"><a href="/60s/index.html">60s Music Quiz</a></h2>
+								<h2 class="mb-4"><a href="/60s_quiz2/index.html">60s Music Quiz #2</a></h2>
+								<h2 class="mb-4"><a href="/70s/index.html">70s Music Quiz</a></h2>
+								<h2 class="mb-4"><a href="/80s_Quiz/index.html">80s Music Quiz</a></h2>
+								<h2 class="mb-4"><a href="/Griffers_Game/index.html">Griffer's 80s Music Quiz</a></h2>
+								<h2 class="mb-4"><a href="/90sEDM/index.html">90s EDM Music Quiz</a></h2>
+								<h2 class="mb-4"><a href="/Miku/index.html">Miku Music Quiz</a></h2>
+								<h2 class="mb-4"><a href="/Country/index.html">Country Music Quiz</a></h2>
+								<h2 class="mb-4"><a href="/Counting/index.html">Counting Game</a></h2>
+								<h2 class="mb-4"><a href="/Mandarin/index.html">Counting in Mandarin Game</a></h2>
+								<h2 class="mb-4"><a href="/ABC/ABC.html">ABCs Game</a></h2>
+								<h2 class="mb-4"><a href="/TheAdventuresofScarlettandGage/SG.html">Scarlett & Gage Adventure Game</a></h2>
+								<!--<h2 class="mb-4"><a href="/WangFamily-web/index.html">Wang Family Game</a></h2>-->
+								
+								
+								
+								
+								<!--<h2 class="mb-4"><a href="/TheAdventuresofScarlettandGage/SG.html">Scarlett & Gage Adventure Game</a></h2>-->
+								
+								
+								<!--<h2 class="mb-4"><a href="/MTV/index.html">80s MTV Video Quiz</a></h2>-->
+								
+								
+				
+								
+								
+								
+                                  
+                                </div>
+
+                </div>
+				
+            </section>
+          
+        </main>
+
+
+        <footer class="site-footer">
+            
+                <div class="container">
+                    <div class="row">
+
+                        
+
+                        <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                            
+                        </div>
+                    </div>
+                </div>
+            
+
+            
+
+                    
+
+                        
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                        <h5 class="site-footer-title mb-3"></h5>
+
+                        
+
+                        
+                           
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-12 mt-5">
+                            <p class="copyright-text">Copyright © 2491 Game Scraps</p>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+    <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
