@@ -16,3 +16,14 @@
 
 .app-launch span { color: #62d3b4; transition: transform .2s; }
 .app-launch:hover span { transform: translate(4px, -4px); }
+
+.featured-app + .featured-app { margin-top: 34px; }
+.picture-index { background: #101313; }
+.picture-index .app-preview { background: radial-gradient(circle at 70% 25%, rgba(242,173,75,.2), transparent 35%), #101313; }
+.picture-index .app-info .status { color: #f2ad4b; }
+.picture-index .app-launch { border-color: #f2ad4b; }
+.picture-index .app-launch span { color: #f2ad4b; }
+.film-reel { position:absolute; width:150px; height:150px; border:28px dotted #f2ad4b; border-radius:50%; left:50%; top:36%; transform:translate(-50%,-50%); opacity:.85; }
+.film-reel:after { content:"700"; position:absolute; inset:0; display:grid; place-items:center; font:42px Georgia,serif; color:#f1ecdf; }
+.rating-line { position:absolute; left:10%; right:10%; bottom:15%; height:30%; border-left:1px solid #555; border-bottom:1px solid #555; background:linear-gradient(164deg,transparent 0 42%,#f2ad4b 43% 44%,transparent 45%); }
+.movie-dots { position:absolute; left:14%; right:12%; bottom:17%; height:24%; background-image:radial-gradient(circle,#ef6f5b 0 2px,transparent 3px); background-size:31px 23px; opacity:.65; }
