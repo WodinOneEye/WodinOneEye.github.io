@@ -1,0 +1,9 @@
+.featured-app {
+  text-decoration: none;
+  transition: border-color .25s, transform .25s;
+}
+
+.featured-app:hover {
+  border-color: rgba(255, 255, 255, .35);
+  transform: translateY(-3px);
+}
