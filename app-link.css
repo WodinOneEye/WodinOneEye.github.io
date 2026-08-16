@@ -1,9 +1,18 @@
-.featured-app {
+.featured-app { text-decoration: none; }
+
+.app-launch {
+  align-items: center;
+  align-self: flex-start;
+  border-bottom: 1px solid #62d3b4;
+  display: inline-flex;
+  font: 500 11px "DM Mono", monospace;
+  gap: 14px;
+  letter-spacing: .1em;
+  margin-top: 34px;
+  padding: 0 0 8px;
   text-decoration: none;
-  transition: border-color .25s, transform .25s;
+  text-transform: uppercase;
 }
 
-.featured-app:hover {
-  border-color: rgba(255, 255, 255, .35);
-  transform: translateY(-3px);
-}
+.app-launch span { color: #62d3b4; transition: transform .2s; }
+.app-launch:hover span { transform: translate(4px, -4px); }
