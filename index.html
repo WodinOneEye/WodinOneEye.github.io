@@ -1,57 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BooRadly's collection of browser games, experiments, and interactive data apps.">
-  <meta name="theme-color" content="#090b10">
-  <title>BooRadly — Games & Apps</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BooRadly's personal library of games, apps, and data sets."><meta name="theme-color" content="#101114">
+  <title>BooRadly — Project Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio.css">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="portal.css"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="BooRadly home"><span>BR</span>BooRadly</a>
-    <nav class="primary-nav" aria-label="Primary navigation"><a href="games.html">Games</a><a href="apps.html">Apps</a></nav>
-    <a class="github-link" href="https://github.com/WodinOneEye">GitHub <span>↗</span></a>
-  </header>
-
-  <main>
-    <section class="hero">
-      <p class="kicker">WODIN ONE EYE / PERSONAL PROJECT PORTAL</p>
-      <h1>Things I make<br><em>to play & explore.</em></h1>
-      <p class="intro">Two collections, one front door: browser games built for play and interactive apps built for curiosity.</p>
-      <div class="scroll-note"><span></span>Choose a collection</div>
-    </section>
-
-    <section class="portals" aria-label="Project collections">
-      <a class="portal portal-games" href="games.html">
-        <div class="portal-top"><span>01 / ARCADE</span><span>OPEN COLLECTION ↗</span></div>
-        <div class="game-art" aria-hidden="true">
-          <span class="planet"></span><span class="ship">▲</span>
-          <span class="star s1">✦</span><span class="star s2">✦</span><span class="star s3">·</span>
-          <span class="laser"></span>
-        </div>
-        <div class="portal-copy"><h2>Games</h2><p>Quizzes, arcade games, adventures, and playful prototypes built for the browser.</p></div>
-        <div class="tags"><span>ARCADE</span><span>QUIZZES</span><span>STORIES</span></div>
-      </a>
-
-      <a class="portal portal-apps" href="apps.html">
-        <div class="portal-top"><span>02 / LAB</span><span>OPEN COLLECTION ↗</span></div>
-        <div class="data-art" aria-hidden="true">
-          <div class="prism"></div><div class="beam"></div>
-          <div class="data-lines"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="portal-copy"><h2>Apps</h2><p>Interactive visualizations, data studies, and useful web experiments.</p></div>
-        <div class="tags"><span>DATA</span><span>TOOLS</span><span>EXPERIMENTS</span></div>
-      </a>
+  <main class="library-shell">
+    <aside class="library-nav">
+      <a class="library-brand" href="#apps"><span>BR</span><strong>BooRadly</strong></a>
+      <p class="nav-label">PROJECT LIBRARY</p>
+      <nav aria-label="Project categories">
+        <a data-category-link="games" href="#games"><span>⌘</span>Games <b data-count="games"></b></a>
+        <a data-category-link="apps" href="#apps"><span>✦</span>Apps <b data-count="apps"></b></a>
+        <a data-category-link="data" href="#data"><span>◫</span>Data Sets <b data-count="data"></b></a>
+      </nav>
+      <div class="nav-note"><p>MADE IN CHICAGO</p><a href="https://github.com/WodinOneEye">GitHub ↗</a></div>
+    </aside>
+    <section class="library-content" aria-live="polite">
+      <header class="library-header"><div><p class="eyebrow" id="category-number">02 / APPS</p><h1 id="category-title">Apps</h1><p id="category-description">Interactive tools, visual stories, and useful experiments.</p></div><div class="header-status"><span></span><span id="project-count"></span> PROJECTS</div></header>
+      <div class="featured-banner" id="featured-banner"></div>
+      <div class="section-bar"><span id="section-label">AVAILABLE NOW</span><span>SELECT A CARD TO OPEN</span></div>
+      <div class="project-cards" id="project-cards"></div>
     </section>
   </main>
-
-  <footer><span>WODINONEEYE.GITHUB.IO</span><span>CHICAGO, IL</span><span>MADE WITH CURIOSITY</span></footer>
+  <script src="portal.js"></script>
 </body>
 </html>
