@@ -14,8 +14,8 @@
   }
 
   const items = byCollection(slug);
-  const index = COLLECTIONS.filter(c => c.group === collection.group).indexOf(collection) + 1;
-  const groupLabel = collection.group === "games" ? "Games" : "Apps";
+  const index = COLLECTIONS.indexOf(collection) + 1;
+  const groupLabel = "Games";
 
   function heroMarkup() {
     const motif = items.length ? items[0].art.motif : "prism";

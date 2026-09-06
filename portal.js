@@ -159,40 +159,30 @@
       collectionTiles() +
       COLLECTIONS.map(railSection).join("");
     wireHero();
-    document.title = "BooRadly — Project Library";
+    document.title = "BooRadly — Game Library";
   }
 
-  function renderGroup(group) {
-    const collections = COLLECTIONS.filter(c => c.group === group);
-    const total = collections.reduce((n, c) => n + byCollection(c.slug).length, 0);
-    const label = group === "games" ? "Games" : "Apps";
-    const copy = group === "games"
-      ? "Browser-ready arcade runs, music quizzes, learning games, and small worlds. Nothing to install."
-      : "Interactive tools, data stories, and useful experiments you can open in a browser.";
+  function renderGames() {
+    const collections = COLLECTIONS.slice();
+    const total = PROJECTS.length;
 
     view.innerHTML = `<header class="page-head">
-        <p class="eyebrow">${total} projects</p>
-        <h1>${label}</h1>
-        <p>${copy}</p>
+        <p class="eyebrow">${total} games</p>
+        <h1>Games</h1>
+        <p>Browser-ready arcade runs, music quizzes, learning games, and small worlds. Nothing to install.</p>
       </header>` +
-      collections.map(collection => {
-        /* A group with a single collection (Apps) would otherwise repeat the
-           page heading and tagline verbatim, so drop the section header. */
-        const header = collections.length === 1 ? "" : `<div class="section__head">
+      collections.map(collection => `<section class="section">
+          <div class="section__head">
             <div>
               <h2>${esc(collection.name)}</h2>
               <p>${esc(collection.tagline)}</p>
             </div>
-            ${collection.page.startsWith("index.html") ? "" :
-              `<a class="section__link" href="${esc(collection.page)}">Open collection &rarr;</a>`}
-          </div>`;
-        return `<section class="section">
-          ${header}
+            <a class="section__link" href="${esc(collection.page)}">Open collection &rarr;</a>
+          </div>
           <div class="grid">${byCollection(collection.slug).map(cardMarkup).join("")}</div>
-        </section>`;
-      }).join("");
+        </section>`).join("");
 
-    document.title = `${label} — BooRadly`;
+    document.title = "Games — BooRadly";
   }
 
   function renderSearch(term) {
@@ -229,10 +219,10 @@
       return;
     }
 
-    const hash = location.hash.slice(1);
-    if (hash === "games" || hash === "apps") {
-      setActiveNav(hash);
-      renderGroup(hash);
+    /* #apps is retired; anything that is not #games lands on the home view. */
+    if (location.hash.slice(1) === "games") {
+      setActiveNav("games");
+      renderGames();
     } else {
       setActiveNav("home");
       renderHome();

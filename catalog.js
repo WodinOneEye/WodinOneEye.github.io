@@ -29,12 +29,6 @@ const COLLECTIONS = [
     name: "Sandbox", short: "Experiments",
     tagline: "Loose ideas, visual experiments, and strange little projects that fit nowhere else.",
     hue: 168
-  },
-  {
-    slug: "apps", group: "apps", page: "index.html#apps",
-    name: "Apps", short: "Apps",
-    tagline: "Interactive tools, data stories, and useful experiments you can open in a browser.",
-    hue: 200
   }
 ];
 
@@ -78,7 +72,7 @@ const PROJECTS = [
   { slug: "galaxy-shooter", title: "Galaxy Shooter", collection: "mini-games",
     type: "Action", tech: "Unity / WebGL", href: "galaxyshooter/index.html",
     blurb: "Waves of enemies, power-ups, and the steady climb toward a score worth bragging about.",
-    art: { motif: "space", hue: 268 }, tags: ["Action", "Space"] },
+    art: { motif: "space", hue: 268 }, featured: true, tags: ["Action", "Space"] },
 
   { slug: "terminal-hacker", title: "Terminal Hacker", collection: "mini-games",
     type: "Puzzle", tech: "Unity / Text", href: "termhacker/index.html",
@@ -150,13 +144,13 @@ const PROJECTS = [
   { slug: "scarlett-and-gage", title: "Scarlett & Gage", collection: "childrens-games",
     type: "Story", tech: "Interactive / Adventure", href: "theadventuresofscarlettandgage/SG.html",
     blurb: "An illustrated choose-your-path adventure for two small heroes.",
-    art: { motif: "kids", hue: 330 }, tags: ["Story", "Adventure"] },
+    art: { motif: "kids", hue: 330 }, featured: true, tags: ["Story", "Adventure"] },
 
   /* ---------- Sandbox ---------- */
   { slug: "gallery", title: "Gallery", collection: "sandbox",
     type: "Visual", tech: "Unity / Collection", href: "gallery/Gallery.html",
     blurb: "A walkable space for work that wanted a room rather than a page.",
-    art: { motif: "prism", hue: 252 }, tags: ["Visual"] },
+    art: { motif: "prism", hue: 252 }, featured: true, tags: ["Visual"] },
 
   { slug: "chatgpt-sandbox", title: "ChatGPT", collection: "sandbox",
     type: "Experiment", tech: "AI / Browser", href: "chatgpt/index.html",
@@ -166,38 +160,7 @@ const PROJECTS = [
   { slug: "morty", title: "Morty", collection: "sandbox",
     type: "Toy", tech: "Comedy / Browser", href: "insult/index.html",
     blurb: "A small, rude machine that exists purely to be a small, rude machine.",
-    art: { motif: "blob", hue: 88 }, tags: ["Comedy"] },
-
-  /* ---------- Apps ---------- */
-  { slug: "rssi-monitor", title: "RSSI Monitor", collection: "apps",
-    type: "Utility", tech: "Windows / Python", href: "downloads/rssi-monitor-source.zip",
-    cta: "Download .zip", download: true,
-    blurb: "Tracks SSID, BSSID, channel, signal quality, and link rates locally — measured values or clearly labelled estimates, with no telemetry.",
-    art: { motif: "signal", hue: 164 }, tags: ["Wi-Fi", "Python"] },
-
-  { slug: "lava-lamp", title: "Gemini Lava Lamp", collection: "apps",
-    type: "Interactive", tech: "SVG / Browser", href: "Gemini_Lava_Lamp/",
-    cta: "Launch app",
-    blurb: "A playful thermodynamic lava lamp with colour presets and controls worth fiddling with.",
-    art: { motif: "lava", hue: 344 }, featured: true, tags: ["SVG", "Toy"] },
-
-  { slug: "lyric-prism", title: "The Lyric Prism", collection: "apps",
-    type: "Data story", tech: "React / Pink Floyd", href: "https://wodinoneeye.github.io/Pink_Floyd_Data_Set/",
-    cta: "Open app",
-    blurb: "Six recurring themes traced across 47 years of Pink Floyd lyrics, from 1967 to 2014.",
-    art: { motif: "prism", hue: 266 }, featured: true, tags: ["Data", "Music"] },
-
-  { slug: "picture-index", title: "The Picture Index", collection: "apps",
-    type: "Data story", tech: "IMDb / Browser", href: "https://the-picture-index.booradly.chatgpt.site",
-    cta: "Open app",
-    blurb: "An interactive study of audience taste across IMDb's top 700 films.",
-    art: { motif: "chart", hue: 38 }, tags: ["Data", "Film"] },
-
-  { slug: "assurance-index", title: "The Assurance Index", collection: "apps",
-    type: "Data story", tech: "Financial risk", href: "https://wodinoneeye.github.io/Big_4_Financial_Risk_Insights/",
-    cta: "Open app",
-    blurb: "Risk, compliance, fraud, AI adoption, and workload across the Big Four, 2020–2025.",
-    art: { motif: "chart", hue: 174 }, featured: true, tags: ["Data", "Finance"] }
+    art: { motif: "blob", hue: 88 }, tags: ["Comedy"] }
 ];
 
 /* ---------- helpers shared by every page ---------- */
@@ -223,15 +186,13 @@ function artMarkup(project, extraClass = "") {
     `<span class="art__ghost">${esc(project.title)}</span><i></i><i></i><i></i></div>`;
 }
 
-/* External links open in a new tab; the RSSI zip is a download. */
+/* External links open in a new tab. */
 function linkAttrs(project) {
-  if (project.download) return " download";
   return isExternal(project.href) ? ' target="_blank" rel="noopener"' : "";
 }
 
 function ctaFor(project) {
-  if (project.cta) return project.cta;
-  return project.collection === "apps" ? "Open app" : "Play now";
+  return project.cta || "Play now";
 }
 
 /* The card used by every rail and grid on the site. */

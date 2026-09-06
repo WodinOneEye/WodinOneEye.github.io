@@ -112,9 +112,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   border-radius: 7px;
   font-size: 13px;
   font-weight: 500;
+  white-space: nowrap;
   color: var(--ink-soft);
   transition: background .18s, color .18s;
 }
+.topnav { flex: none; }
 .topnav a:hover { color: #fff; background: #1e222b; }
 .topnav a.is-active { color: #fff; }
 .topnav a.is-active::after {
