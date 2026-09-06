@@ -23,12 +23,6 @@ const COLLECTIONS = [
     name: "Children's Games", short: "Kids",
     tagline: "Bright, friendly learning games and an interactive adventure for curious younger players.",
     hue: 45
-  },
-  {
-    slug: "sandbox", group: "games", page: "SandBox.html",
-    name: "Sandbox", short: "Experiments",
-    tagline: "Loose ideas, visual experiments, and strange little projects that fit nowhere else.",
-    hue: 168
   }
 ];
 
@@ -52,7 +46,7 @@ const PROJECTS = [
   { slug: "desert-command", title: "Desert Command", collection: "mini-games",
     type: "Defense", tech: "Browser / Arcade", href: "misslecommand/index.html",
     blurb: "Missile Command, reimagined. Intercept everything falling toward your cities.",
-    art: { motif: "arc", hue: 12 }, tags: ["Arcade", "Defense"] },
+    art: { motif: "arc", hue: 12 }, featured: true, tags: ["Arcade", "Defense"] },
 
   { slug: "dragon-snake", title: "Dragon Snake", collection: "mini-games",
     type: "Classic", tech: "Browser / Arcade", href: "dragonsnake1/index.html",
@@ -144,23 +138,7 @@ const PROJECTS = [
   { slug: "scarlett-and-gage", title: "Scarlett & Gage", collection: "childrens-games",
     type: "Story", tech: "Interactive / Adventure", href: "theadventuresofscarlettandgage/SG.html",
     blurb: "An illustrated choose-your-path adventure for two small heroes.",
-    art: { motif: "kids", hue: 330 }, featured: true, tags: ["Story", "Adventure"] },
-
-  /* ---------- Sandbox ---------- */
-  { slug: "gallery", title: "Gallery", collection: "sandbox",
-    type: "Visual", tech: "Unity / Collection", href: "gallery/Gallery.html",
-    blurb: "A walkable space for work that wanted a room rather than a page.",
-    art: { motif: "prism", hue: 252 }, featured: true, tags: ["Visual"] },
-
-  { slug: "chatgpt-sandbox", title: "ChatGPT", collection: "sandbox",
-    type: "Experiment", tech: "AI / Browser", href: "chatgpt/index.html",
-    blurb: "An early experiment in wiring a language model into something you can poke at.",
-    art: { motif: "terminal", hue: 158 }, tags: ["AI"] },
-
-  { slug: "morty", title: "Morty", collection: "sandbox",
-    type: "Toy", tech: "Comedy / Browser", href: "insult/index.html",
-    blurb: "A small, rude machine that exists purely to be a small, rude machine.",
-    art: { motif: "blob", hue: 88 }, tags: ["Comedy"] }
+    art: { motif: "kids", hue: 330 }, featured: true, tags: ["Story", "Adventure"] }
 ];
 
 /* ---------- helpers shared by every page ---------- */
