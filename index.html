@@ -1,32 +1,59 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BooRadly's personal library of games and apps."><meta name="theme-color" content="#101114">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BooRadly — a library of browser games, interactive tools, and data stories. Made in Chicago.">
+  <meta name="theme-color" content="#0a0b0e">
   <title>BooRadly — Project Library</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portal.css?v=20260817-rssi-fix"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="portal.css?v=20260906-redesign">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-  <main class="library-shell">
-    <aside class="library-nav">
-      <a class="library-brand" href="#home"><span>BR</span><strong>BooRadly</strong></a>
-      <p class="nav-label">PROJECT LIBRARY</p>
-      <nav aria-label="Project categories">
-        <a data-category-link="games" href="#games"><span>⌘</span>Games <b data-count="games"></b></a>
-        <a data-category-link="apps" href="#apps"><span>✦</span>Apps <b data-count="apps"></b></a>
+  <a class="skip-link" href="#view">Skip to content</a>
 
-      </nav>
-      <div class="nav-note"><p>MADE IN CHICAGO</p><span>PLAY / BUILD / EXPLORE</span></div>
-    </aside>
-    <section class="library-content" aria-live="polite">
-      <header class="library-header"><div><p class="eyebrow" id="category-number">PROJECT LIBRARY</p><h1 id="category-title">Choose your next stop.</h1><p id="category-description">Pick a collection to explore browser games, interactive tools, and data stories.</p></div><div class="header-status"><span></span><span id="project-count">02</span><span id="count-label"> COLLECTIONS</span></div></header>
-      <div class="featured-banner" id="featured-banner"></div>
-      <div class="section-bar"><span id="section-label">CHOOSE A COLLECTION</span><span>SELECT A CARD TO OPEN</span></div>
-      <div class="project-cards" id="project-cards"></div>
-    </section>
-  </main>
-  <script src="portal.js?v=20260817-rssi-fix"></script>
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand__mark">BR</span>
+      <span class="brand__name">BooRadly</span>
+    </a>
+
+    <nav class="topnav" aria-label="Primary">
+      <a data-nav="home" href="#home">Home</a>
+      <a data-nav="games" href="#games">Games</a>
+      <a data-nav="apps" href="#apps">Apps</a>
+    </nav>
+
+    <span class="topbar__spacer"></span>
+
+    <div class="search">
+      <span class="search__icon" aria-hidden="true">&#9906;</span>
+      <label class="skip-link" for="search-input">Search projects</label>
+      <input id="search-input" type="search" placeholder="Search the library&hellip;" autocomplete="off">
+    </div>
+
+    <span class="topbar__tag">MADE IN CHICAGO</span>
+  </header>
+
+  <main class="page" id="view" aria-live="polite"></main>
+
+  <footer class="site-foot">
+    <span>BooRadly &middot; Play / Build / Explore</span>
+    <nav aria-label="Footer">
+      <a href="#games">Games</a>
+      <a href="#apps">Apps</a>
+      <a href="Mini-Games.html">Mini Games</a>
+      <a href="Music-Quizes.html">Music Quizzes</a>
+      <a href="Children-Games.html">Children&rsquo;s Games</a>
+      <a href="SandBox.html">Sandbox</a>
+    </nav>
+  </footer>
+
+  <script src="catalog.js?v=20260906-redesign"></script>
+  <script src="portal.js?v=20260906-redesign"></script>
 </body>
 </html>
