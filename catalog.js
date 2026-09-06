@@ -21,7 +21,7 @@ const COLLECTIONS = [
   {
     slug: "childrens-games", group: "games", page: "Children-Games.html",
     name: "Children's Games", short: "Kids",
-    tagline: "Bright, friendly learning games and an interactive adventure for curious younger players.",
+    tagline: "Bright, friendly learning games and illustrated stories for curious younger players.",
     hue: 45
   }
 ];
@@ -72,6 +72,11 @@ const PROJECTS = [
     type: "Puzzle", tech: "Unity / Text", href: "termhacker/index.html",
     blurb: "Work your way up through increasingly ridiculous systems, one anagram at a time.",
     art: { motif: "terminal", hue: 146 }, tags: ["Words", "Puzzle"] },
+
+  { slug: "topdown", title: "TopDown", collection: "mini-games",
+    type: "Action", tech: "Unity / WebGL", href: "topdown/TopDown.html",
+    blurb: "A top-down arena where your character aims wherever the cursor goes, with blocks scattered across the field.",
+    art: { motif: "tiles", hue: 158 }, tags: ["Action", "Arena"] },
 
   /* ---------- Music Quizzes ---------- */
   { slug: "60s-quiz", title: "60s Music Quiz", collection: "music-quizzes",
@@ -130,6 +135,11 @@ const PROJECTS = [
     blurb: "The same gentle counting practice, this time in Mandarin.",
     art: { motif: "kids", hue: 4 }, tags: ["Numbers", "Mandarin"] },
 
+  { slug: "numbers", title: "Numbers", collection: "childrens-games",
+    type: "Learning", tech: "Ren'Py / Numbers", href: "mollys_game/index.html",
+    blurb: "A narrated count from one to ten, illustrated the whole way with fluffy cats, flying kittens, and fleecy sheep.",
+    art: { motif: "kids", hue: 268 }, tags: ["Numbers", "Counting"] },
+
   { slug: "abcs", title: "ABCs Game", collection: "childrens-games",
     type: "Learning", tech: "Letters / Words", href: "abc/ABC.html",
     blurb: "Letters, sounds, and first words for players just getting started.",
@@ -138,7 +148,12 @@ const PROJECTS = [
   { slug: "scarlett-and-gage", title: "Scarlett & Gage", collection: "childrens-games",
     type: "Story", tech: "Interactive / Adventure", href: "theadventuresofscarlettandgage/SG.html",
     blurb: "An illustrated choose-your-path adventure for two small heroes.",
-    art: { motif: "kids", hue: 330 }, featured: true, tags: ["Story", "Adventure"] }
+    art: { motif: "kids", hue: 330 }, featured: true, tags: ["Story", "Adventure"] },
+
+  { slug: "wang-family", title: "Wang Family", collection: "childrens-games",
+    type: "Story", tech: "Ren'Py / Adventure", href: "wangfamily/WangFamily-web/index.html",
+    blurb: "An illustrated family trip through Chicago, Hong Kong, Fuxin, New Orleans, Osaka, and Disneyland, with a map and something to eat at every stop.",
+    art: { motif: "kids", hue: 105 }, tags: ["Story", "Travel"] }
 ];
 
 /* ---------- helpers shared by every page ---------- */
