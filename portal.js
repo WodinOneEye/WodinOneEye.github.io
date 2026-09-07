@@ -30,6 +30,7 @@
               <span>${esc(collection ? collection.name : "")}</span>
             </div>
             <p class="hero__blurb">${esc(project.blurb)}</p>
+            ${creditLine(project)}
             <div class="hero__actions">
               <span class="btn btn--primary">${esc(ctaFor(project))} &rarr;</span>
             </div>

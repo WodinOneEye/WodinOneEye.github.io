@@ -442,6 +442,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+/* artwork attribution — stays visible at every width, unlike the blurb */
+.card__credit {
+  margin: 0 0 10px;
+  font: 10px var(--mono);
+  letter-spacing: .06em;
+  color: var(--faint);
+}
+.hero__body .card__credit { margin: -6px 0 16px; color: var(--ink-soft); }
+
 .card__foot {
   display: flex; align-items: center; justify-content: space-between; gap: 10px;
   margin-top: auto;
@@ -558,6 +567,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .site-foot nav { display: flex; flex-wrap: wrap; gap: 18px; }
 .site-foot a:hover { color: var(--ink); }
+/* attribution sits on its own row beneath the footer nav */
+.site-foot__credit { flex-basis: 100%; color: var(--faint); }
+.site-foot__credit a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* --------------------------------------------------------------------------
    9. Procedural artwork

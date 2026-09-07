@@ -41,7 +41,8 @@ const PROJECTS = [
   { slug: "memory-hong-kong", title: "Memory Hong Kong", collection: "mini-games",
     type: "Puzzle", tech: "Unity / WebGL", href: "memory/memory.html",
     blurb: "Match the pairs, keep the streak, and see how much of the city you can hold in your head.",
-    art: { motif: "tiles", hue: 194 }, tags: ["Memory", "Puzzle"] },
+    art: { motif: "tiles", hue: 194 }, tags: ["Memory", "Puzzle"],
+    credit: { name: "Z.W. Gu", url: "https://www.artstation.com/guweiz", what: "Title art" } },
 
   { slug: "desert-command", title: "Desert Command", collection: "mini-games",
     type: "Defense", tech: "Browser / Arcade", href: "misslecommand/index.html",
@@ -188,6 +189,15 @@ function ctaFor(project) {
   return project.cta || "Play now";
 }
 
+/* Artwork credit. Cards and hero slides are themselves links, and an anchor
+   cannot be nested inside another, so this renders as plain text; the linked
+   version of the same credit lives in the site footer. */
+function creditLine(project) {
+  if (!project.credit) return "";
+  const { what, name } = project.credit;
+  return `<p class="card__credit">${esc(what || "Art")} by ${esc(name)}</p>`;
+}
+
 /* The card used by every rail and grid on the site. */
 function cardMarkup(project) {
   return `<a class="card" href="${esc(project.href)}"${linkAttrs(project)}>
@@ -198,6 +208,7 @@ function cardMarkup(project) {
       <div class="card__body">
         <h3 class="card__title">${esc(project.title)}</h3>
         <p class="card__blurb">${esc(project.blurb)}</p>
+        ${creditLine(project)}
         <div class="card__foot">
           <span>${esc(project.tech)}</span>
           <span class="card__cta">${esc(ctaFor(project))} <b>&rarr;</b></span>
