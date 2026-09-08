@@ -49,6 +49,11 @@ const PROJECTS = [
     blurb: "Missile Command, reimagined. Intercept everything falling toward your cities.",
     art: { motif: "arc", hue: 12 }, featured: true, tags: ["Arcade", "Defense"] },
 
+  { slug: "desert-command-ai", title: "Desert Command AI", collection: "mini-games",
+    type: "Defense", tech: "Unity / WebGL", href: "desert-command-ai/index.html",
+    blurb: "The same skyline, but the enemy is studying you. It tracks where you aim, how high you detonate and what you waste, then buys whatever beats that habit.",
+    art: { motif: "arc", hue: 212 }, featured: true, tags: ["Arcade", "Defense", "AI"] },
+
   { slug: "dragon-snake", title: "Dragon Snake", collection: "mini-games",
     type: "Classic", tech: "Browser / Arcade", href: "dragonsnake1/index.html",
     blurb: "The snake you know, grown into something with scales and a temper.",
