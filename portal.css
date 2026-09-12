@@ -1,6 +1,6 @@
 /* ==========================================================================
    BooRadly — portal design system
-   Dark storefront layout: sticky top bar, hero carousel, horizontal rails,
+   Dark storefront layout: sticky top bar, hero carousel, wrapping card grids,
    16:9 cards, and a set of procedural artwork recipes driven by a hue token.
    ========================================================================== */
 
@@ -354,30 +354,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .section__link:hover { color: var(--violet-lit); }
 
-/* horizontal scroller */
-.rail {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(232px, 1fr);
-  gap: 14px;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
-  padding-bottom: 10px;
-  margin: 0 calc(var(--page-pad) * -1);
-  padding-inline: var(--page-pad);
-  scrollbar-width: thin;
-  scrollbar-color: #2e333d transparent;
-}
-.rail > * { scroll-snap-align: start; }
-.rail::-webkit-scrollbar { height: 8px; }
-.rail::-webkit-scrollbar-track { background: transparent; }
-.rail::-webkit-scrollbar-thumb { background: #2e333d; border-radius: 4px; }
-.rail::-webkit-scrollbar-thumb:hover { background: #3d4450; }
-
-/* static grid (category + search results) */
+/* card grid: wraps to the width available, so nothing needs scrolling sideways */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 16px;
 }
 
@@ -901,7 +881,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .hero__title { font-size: 32px; }
   .hero__blurb { display: none; }
   .hero__thumbs { display: none; }
-  .rail { grid-auto-columns: minmax(190px, 1fr); }
   .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
   .card__blurb { display: none; }
   /* the tech line and the CTA cannot share a row this narrow — the type badge

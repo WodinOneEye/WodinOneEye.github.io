@@ -111,7 +111,7 @@
 
   /* ---------- sections ---------- */
 
-  function railSection(collection) {
+  function collectionSection(collection) {
     const items = byCollection(collection.slug);
     if (!items.length) return "";
     return `<section class="section">
@@ -122,7 +122,7 @@
           </div>
           <a class="section__link" href="${esc(collection.page)}">All ${items.length} &rarr;</a>
         </div>
-        <div class="rail">${items.map(cardMarkup).join("")}</div>
+        <div class="grid">${items.map(cardMarkup).join("")}</div>
       </section>`;
   }
 
@@ -158,7 +158,7 @@
     view.innerHTML =
       heroMarkup(featuredProjects()) +
       collectionTiles() +
-      COLLECTIONS.map(railSection).join("");
+      COLLECTIONS.map(collectionSection).join("");
     wireHero();
     document.title = "BooRadly — Game Library";
   }
