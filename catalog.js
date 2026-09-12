@@ -64,26 +64,6 @@ const PROJECTS = [
     blurb: "Slide, merge, repeat. The number puzzle that refuses to let you stop at one more go.",
     art: { motif: "tiles", hue: 38 }, tags: ["Puzzle", "Numbers"] },
 
-  { slug: "asteroids", title: "Asteroids", collection: "mini-games",
-    type: "Arcade", tech: "Browser / Space", href: "asteroids/index.html",
-    blurb: "Drifting rocks, wrapping screen edges, and a ship with no brakes worth mentioning.",
-    art: { motif: "space", hue: 218 }, tags: ["Arcade", "Space"] },
-
-  { slug: "galaxy-shooter", title: "Galaxy Shooter", collection: "mini-games",
-    type: "Action", tech: "Unity / WebGL", href: "galaxyshooter/index.html",
-    blurb: "Waves of enemies, power-ups, and the steady climb toward a score worth bragging about.",
-    art: { motif: "space", hue: 268 }, featured: true, tags: ["Action", "Space"] },
-
-  { slug: "terminal-hacker", title: "Terminal Hacker", collection: "mini-games",
-    type: "Puzzle", tech: "Unity / Text", href: "termhacker/index.html",
-    blurb: "Work your way up through increasingly ridiculous systems, one anagram at a time.",
-    art: { motif: "terminal", hue: 146 }, tags: ["Words", "Puzzle"] },
-
-  { slug: "topdown", title: "TopDown", collection: "mini-games",
-    type: "Action", tech: "Unity / WebGL", href: "topdown/TopDown.html",
-    blurb: "A top-down arena where your character aims wherever the cursor goes, with blocks scattered across the field.",
-    art: { motif: "tiles", hue: 158 }, tags: ["Action", "Arena"] },
-
   /* ---------- Children's Games ---------- */
   { slug: "counting", title: "Counting Game", collection: "childrens-games",
     type: "Learning", tech: "Numbers / English", href: "counting/index.html",
