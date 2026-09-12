@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qix Reveal · The GUWEIZ Collection</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230b1218' d='M0 0h32v32H0z'/%3E%3Cpath fill='none' stroke='%2387ffcc' stroke-width='3' d='M6 6h20v20H6zM6 18h12V6'/%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090d12;color:#e5f0eb;font:14px system-ui,sans-serif;height:100dvh;display:flex;align-items:center;justify-content:center}
+#shell{width:min(100vw,160vh);height:min(100vh,62.5vw);position:relative}
+canvas{width:100%;height:100%;display:block;outline:0}
+#load{position:absolute;inset:0;background:#09121a;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
+h1{font-size:48px;letter-spacing:-2px;margin:0;color:#87ffcc}
+p{color:#8fa5ac;margin:0;text-align:center;line-height:1.6}
+progress{width:260px;height:5px;accent-color:#87ffcc}
+#full{position:fixed;right:12px;bottom:9px;background:#12212a;color:#a3bcb9;opacity:.7;font-size:10px;padding:6px 10px;border:0;cursor:pointer}
+#mobile{display:none}
+@media(max-width:700px){#mobile{display:block;position:fixed;top:0;padding:12px;background:#172a34;text-align:center;width:100%;z-index:3}}
+</style>
+</head>
+<body>
+<div id="mobile">Best played on a PC with a keyboard or controller.</div>
+<div id="shell">
+  <canvas id="unity" tabindex="0" aria-label="Qix arcade game. Arrow keys or WASD move, Space draws, Shift draws slowly, P pauses."></canvas>
+  <div id="load">
+    <h1>QIX / REVEAL</h1>
+    <p id="status">Loading…</p>
+    <progress id="progress" max="1" value="0"></progress>
+    <p>Artwork by GUWEIZ</p>
+  </div>
+</div>
+<button id="full">FULLSCREEN</button>
+<script>
+// Static hosting: the build is described here rather than by a server endpoint.
+const build = "Build";
+const config = {
+  dataUrl: build + "/build.data.unityweb",
+  frameworkUrl: build + "/build.framework.js.unityweb",
+  codeUrl: build + "/build.wasm.unityweb",
+  streamingAssetsUrl: "StreamingAssets",
+  companyName: "Quarter Club",
+  productName: "Qix Reveal",
+  productVersion: "1.0"
+};
+let game;
+const status = document.getElementById('status');
+const script = document.createElement('script');
+script.src = build + "/build.loader.js";
+script.onerror = () => { status.textContent = 'Could not load the game. Please reload.'; };
+script.onload = async () => {
+  try {
+    game = await createUnityInstance(document.getElementById('unity'), config, p => document.getElementById('progress').value = p);
+    document.getElementById('load').style.display = 'none';
+    document.getElementById('unity').focus();
+  } catch (e) {
+    status.textContent = 'Unable to start WebGL. Try a current desktop browser with hardware acceleration enabled.';
+  }
+};
+document.getElementById('full').onclick = () => game && game.SetFullscreen(1);
+document.body.appendChild(script);
+</script>
+</body>
+</html>

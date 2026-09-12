@@ -49,6 +49,12 @@ const PROJECTS = [
     blurb: "Missile Command, reimagined. Intercept everything falling toward your cities.",
     art: { motif: "arc", hue: 12 }, featured: true, tags: ["Arcade", "Defense"] },
 
+  { slug: "qix-reveal", title: "Qix Reveal", collection: "mini-games",
+    type: "Arcade", tech: "Unity / WebGL", href: "qix-reveal/index.html",
+    blurb: "Claim the dark and the painting underneath comes up with it. Cut fast for ground, slow for double points, and never stop mid-line — the fuse is watching.",
+    credit: { name: "GUWEIZ", url: "https://www.artstation.com/guweiz", what: "Artwork" },
+    art: { motif: "tiles", hue: 248 }, featured: true, tags: ["Arcade", "Classic", "Art"] },
+
   { slug: "desert-command-ai", title: "Desert Command AI", collection: "mini-games",
     type: "Defense", tech: "Unity / WebGL", href: "desert-command-ai/index.html",
     blurb: "The same skyline, but the enemy is studying you. It tracks where you aim, how high you detonate and what you waste, then buys whatever beats that habit.",
