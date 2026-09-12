@@ -170,7 +170,7 @@
     view.innerHTML = `<header class="page-head">
         <p class="eyebrow">${total} games</p>
         <h1>Games</h1>
-        <p>Browser-ready arcade runs, music quizzes, learning games, and small worlds. Nothing to install.</p>
+        <p>Browser-ready arcade runs, learning games, and small worlds. Nothing to install.</p>
       </header>` +
       collections.map(collection => `<section class="section">
           <div class="section__head">
@@ -198,7 +198,7 @@
       </header>` +
       (hits.length
         ? `<div class="grid">${hits.map(cardMarkup).join("")}</div>`
-        : `<p class="empty">Nothing matched &mdash; try &ldquo;quiz&rdquo;, &ldquo;unity&rdquo;, or &ldquo;data&rdquo;.</p>`);
+        : `<p class="empty">Nothing matched &mdash; try &ldquo;arcade&rdquo;, &ldquo;unity&rdquo;, or &ldquo;puzzle&rdquo;.</p>`);
 
     document.title = "Search — BooRadly";
   }

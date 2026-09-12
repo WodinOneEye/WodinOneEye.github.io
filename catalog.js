@@ -13,12 +13,6 @@ const COLLECTIONS = [
     hue: 22
   },
   {
-    slug: "music-quizzes", group: "games", page: "Music-Quizes.html",
-    name: "Music Quizzes", short: "Quizzes",
-    tagline: "Test your ears across the decades — sixties classics, yacht rock, country, EDM, and Miku.",
-    hue: 285
-  },
-  {
     slug: "childrens-games", group: "games", page: "Children-Games.html",
     name: "Children's Games", short: "Kids",
     tagline: "Bright, friendly learning games and illustrated stories for curious younger players.",
@@ -89,52 +83,6 @@ const PROJECTS = [
     type: "Action", tech: "Unity / WebGL", href: "topdown/TopDown.html",
     blurb: "A top-down arena where your character aims wherever the cursor goes, with blocks scattered across the field.",
     art: { motif: "tiles", hue: 158 }, tags: ["Action", "Arena"] },
-
-  /* ---------- Music Quizzes ---------- */
-  { slug: "60s-quiz", title: "60s Music Quiz", collection: "music-quizzes",
-    type: "Quiz", tech: "1960s / Classics", href: "60s/index.html",
-    blurb: "British invasion, Motown, and surf rock. Name the track before the intro runs out.",
-    art: { motif: "vinyl", hue: 18 }, tags: ["1960s"] },
-
-  { slug: "60s-quiz-2", title: "60s Music Quiz #2", collection: "music-quizzes",
-    type: "Quiz", tech: "1960s / Classics", href: "60s_quiz2/index.html",
-    blurb: "A second round of the sixties for anyone who cleared the first one too easily.",
-    art: { motif: "vinyl", hue: 342 }, tags: ["1960s"] },
-
-  { slug: "70s-quiz", title: "70s Music Quiz", collection: "music-quizzes",
-    type: "Quiz", tech: "1970s / Rock", href: "70s/index.html",
-    blurb: "Arena rock, funk, and everything the seventies did at full volume.",
-    art: { motif: "vinyl", hue: 288 }, tags: ["1970s"] },
-
-  { slug: "yacht-rock", title: "Yacht Rock", collection: "music-quizzes",
-    type: "Quiz", tech: "1970s / Soft Rock", href: "yrquiz/index.html",
-    blurb: "Smooth basslines and immaculate production. Somehow the hardest quiz here.",
-    art: { motif: "vinyl", hue: 196 }, tags: ["1970s", "Soft Rock"] },
-
-  { slug: "80s-quiz", title: "80s Music Quiz", collection: "music-quizzes",
-    type: "Quiz", tech: "1980s / New Wave", href: "80s_quiz/index.html",
-    blurb: "Synths, drum machines, and reverb on absolutely everything.",
-    art: { motif: "vinyl", hue: 318 }, tags: ["1980s"] },
-
-  { slug: "griffers-80s", title: "Griffer's 80s Quiz", collection: "music-quizzes",
-    type: "Quiz", tech: "1980s / Mix", href: "griffers_game/index.html",
-    blurb: "A hand-picked eighties set with a few deep cuts to keep you honest.",
-    art: { motif: "vinyl", hue: 258 }, tags: ["1980s"] },
-
-  { slug: "90s-edm", title: "90s EDM", collection: "music-quizzes",
-    type: "Quiz", tech: "1990s / Dance", href: "90sedm/index.html",
-    blurb: "Big beat, house, and trance from when the drop was still being invented.",
-    art: { motif: "vinyl", hue: 166 }, tags: ["1990s", "Dance"] },
-
-  { slug: "country-quiz", title: "Country Music", collection: "music-quizzes",
-    type: "Quiz", tech: "Country / Mix", href: "country/index.html",
-    blurb: "Outlaw country through to modern Nashville, all in one run.",
-    art: { motif: "vinyl", hue: 34 }, tags: ["Country"] },
-
-  { slug: "miku", title: "Miku", collection: "music-quizzes",
-    type: "Quiz", tech: "Vocaloid / Pop", href: "miku/index.html",
-    blurb: "A full-motion Vocaloid quiz — the loudest, brightest thing in the library.",
-    art: { motif: "vinyl", hue: 176 }, featured: true, tags: ["Vocaloid", "Video"] },
 
   /* ---------- Children's Games ---------- */
   { slug: "counting", title: "Counting Game", collection: "childrens-games",

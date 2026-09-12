@@ -1,4 +1,4 @@
-/* BooRadly — collection pages (Mini Games, Music Quizzes, etc.).
+/* BooRadly — collection pages (Mini Games, Children's Games).
    The page declares which collection it is via <body data-collection="...">.
    Requires catalog.js to be loaded first. */
 
