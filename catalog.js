@@ -64,6 +64,11 @@ const PROJECTS = [
     blurb: "Slide, merge, repeat. The number puzzle that refuses to let you stop at one more go.",
     art: { motif: "tiles", hue: 38 }, tags: ["Puzzle", "Numbers"] },
 
+  { slug: "shell-game", title: "Shell Game", collection: "mini-games",
+    type: "Focus", tech: "Unity / WebGL", href: "shellgame/index.html",
+    blurb: "A pearl goes under one of three shells, then they start moving. The swaps get faster every round and you only get three wrong guesses, so keep your eye on the right shell.",
+    art: { motif: "arc", hue: 165 }, tags: ["Memory", "Reflex"] },
+
   /* ---------- Children's Games ---------- */
   { slug: "counting", title: "Counting Game", collection: "childrens-games",
     type: "Learning", tech: "Numbers / English", href: "counting/index.html",
