@@ -64,6 +64,11 @@ const PROJECTS = [
     blurb: "Slide, merge, repeat. The number puzzle that refuses to let you stop at one more go.",
     art: { motif: "tiles", hue: 38 }, tags: ["Puzzle", "Numbers"] },
 
+  { slug: "name-that-band", title: "Name That Band", collection: "mini-games",
+    type: "Music", tech: "Cloud Run / Web", href: "https://name-that-tune-361366960701.us-central1.run.app/",
+    blurb: "Pick a decade or a genre, hear the preview, name the band. Every answer is worth 100 points and the run keeps going until your third miss.",
+    art: { motif: "vinyl", hue: 45 }, tags: ["Music", "Quiz"] },
+
   { slug: "shell-game", title: "Shell Game", collection: "mini-games",
     type: "Focus", tech: "Unity / WebGL", href: "shellgame/index.html",
     blurb: "A pearl goes under one of three shells, then they start moving. The swaps get faster every round and you only get three wrong guesses, so keep your eye on the right shell.",
